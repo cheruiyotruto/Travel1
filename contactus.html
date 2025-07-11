@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Sprintup Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Contact Info Bar -->
+  <div class="top-contact-bar">
+    <div class="left-contact">
+      <i class="fas fa-envelope"></i> info@sprintupservices.co.ke
+      <i class="fas fa-phone"></i> +254 724 792140
+    </div>
+    <div class="right-icons">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="images/Logo2.png" alt="Sprintup Logo" />
+    </div>
+    <nav class="main-nav" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contactus.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+      <a href="booking.html" class="quote-btn">Book Now</a>
+    </div>
+    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Fill out the form below or reach us through the provided contacts.</p>
+
+    <div class="contact-wrapper">
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="quote-btn">Send Message</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        <p><i class="fas fa-envelope"></i> support@kenyatravel.co.ke</p>
+        <p><i class="fas fa-phone"></i> +254 700 123456</p>
+        <p><i class="fas fa-clock"></i> Mon - Sat: 8:00am - 6:00pm</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Sprintup Services</h3>
+        <p>Kenya Travel is your trusted partner for seamless intercity transport bookings across Kenya. We make travel easy, secure, and affordable with digital convenience at your fingertips.</p>
+      </div>
+      <div class="footer-column">
+        <h3>POPULAR DESTINATIONS</h3>
+        <ul>
+          <li>Nairobi</li>
+          <li>Eldoret</li>
+          <li>Kisumu</li>
+          <li>Kericho</li>
+          <li>Nakuru</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>OUR PARTNERS</h3>
+        <ul>
+          <li>Modern Coast</li>
+          <li>Easy Coach</li>
+          <li>Transline</li>
+          <li>Dreamline</li>
+          <li>Mash Poa</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>GET IN TOUCH</h3>
+        <ul class="contact-info">
+          <li>📞 <a href="tel:+254700123456">+254 700 123456</a></li>
+          <li>📧 <a href="mailto:support@kenyatravel.co.ke">support@kenyatravel.co.ke</a></li>
+          <li>📍 Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kenya Travel Booking. All rights reserved. <br> Designed by <a href="#">KenyaTravel Team</a> | by <a href="#">General Cheruiyot Ruto</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

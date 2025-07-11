@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking | Sprintup Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Contact Info Bar -->
+  <div class="top-contact-bar">
+    <div class="left-contact">
+      <i class="fas fa-envelope"></i> info@sprintupservices.co.ke
+      <i class="fas fa-phone"></i> +254 724 792140
+    </div>
+    <div class="right-icons">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <!-- Header/Nav -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="images/Logo2.png" alt="Sprintup Logo" />
+    </div>
+    <nav class="main-nav" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+      <a href="booking.html" class="quote-btn">Book Now</a>
+    </div>
+    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <div class="container">
+      <h2>Book Your Trip or Send a Parcel</h2>
+      <p>Select your travel or parcel details below to proceed.</p>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-group">
+          <label for="booking-type">Booking Type</label>
+          <select id="booking-type" name="booking-type" required>
+            <option value="passenger">Passenger</option>
+            <option value="parcel">Parcel Delivery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="from">From</label>
+          <select id="from" name="from" required>
+            <option value="" disabled selected>Select County</option>
+            <!-- All 47 counties -->
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisumu</option>
+            <option value="Kericho">Kericho</option>
+            <option value="Nakuru">Nakuru</option>
+            <option value="Eldoret">Eldoret</option>
+            <option value="Kakamega">Kakamega</option>
+            <option value="Machakos">Machakos</option>
+            <option value="Bungoma">Bungoma</option>
+            <option value="Kiambu">Kiambu</option>
+            <!-- Add remaining as needed -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="to">To</label>
+          <select id="to" name="to" required>
+            <option value="" disabled selected>Select County</option>
+            <!-- Repeat same counties -->
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisumu</option>
+            <option value="Kericho">Kericho</option>
+            <option value="Nakuru">Nakuru</option>
+            <option value="Eldoret">Eldoret</option>
+            <option value="Kakamega">Kakamega</option>
+            <option value="Machakos">Machakos</option>
+            <option value="Bungoma">Bungoma</option>
+            <option value="Kiambu">Kiambu</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Travel/Delivery Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <div class="form-group">
+          <label for="idnumber">ID/Passport Number</label>
+          <input type="text" id="idnumber" name="idnumber" required>
+        </div>
+
+        <div class="form-group">
+          <label for="payment">Mode of Payment</label>
+          <select id="payment" name="payment" required>
+            <option value="mpesa">M-Pesa</option>
+            <option value="card">Card</option>
+            <option value="airtel">Airtel Money</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fare">Estimated Fare (Ksh)</label>
+          <input type="text" id="fare" name="fare" readonly />
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="quote-btn">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Footer content omitted for brevity, remain unchanged -->
+      <div class="footer-column">
+        <h3>GET IN TOUCH</h3>
+        <ul class="contact-info">
+          <li>📞 <a href="tel:+254700123456">+254 700 123456</a></li>
+          <li>📧 <a href="mailto:support@kenyatravel.co.ke">support@kenyatravel.co.ke</a></li>
+          <li>📍 Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kenya Travel Booking. All rights reserved. <br> Designed by <a href="#">KenyaTravel Team</a> | by <a href="#">General Cheruiyot Ruto</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    const fares = {
+      "Nairobi-Kisumu": 800,
+      "Kisumu-Nairobi": 800,
+      "Nairobi-Eldoret": 700,
+      "Kericho-Kisumu": 300,
+      "Nakuru-Nairobi": 500,
+      "Eldoret-Kericho": 350,
+    };
+
+    document.getElementById("from").addEventListener("change", updateFare);
+    document.getElementById("to").addEventListener("change", updateFare);
+
+    function updateFare() {
+      const from = document.getElementById("from").value;
+      const to = document.getElementById("to").value;
+      const key = `${from}-${to}`;
+      const fare = fares[key] || "To be determined";
+      document.getElementById("fare").value = fare === "To be determined" ? fare : `Ksh ${fare}`;
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("fullname").value;
+      const contact = document.getElementById("contact").value;
+      const from = document.getElementById("from").value;
+      const to = document.getElementById("to").value;
+      const date = document.getElementById("date").value;
+      const bookingType = document.getElementById("booking-type").value;
+      const payment = document.getElementById("payment").value;
+      const fare = document.getElementById("fare").value;
+
+      const mpesaCode = "TRX" + Math.floor(100000 + Math.random() * 900000);
+      alert(payment.toUpperCase() + " Payment Successful!\nTransaction Code: " + mpesaCode);
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(16);
+      doc.text("Sprintup Services - Booking Receipt", 20, 20);
+      doc.setFontSize(12);
+      doc.text(`Name: ${name}`, 20, 40);
+      doc.text(`Contact: ${contact}`, 20, 50);
+      doc.text(`Booking Type: ${bookingType}`, 20, 60);
+      doc.text(`From: ${from}`, 20, 70);
+      doc.text(`To: ${to}`, 20, 80);
+      doc.text(`Date: ${date}`, 20, 90);
+      doc.text(`Payment Method: ${payment.toUpperCase()}`, 20, 100);
+      doc.text(`Fare: ${fare}`, 20, 110);
+      doc.text(`Transaction Code: ${mpesaCode}`, 20, 120);
+      doc.text("Thank you for booking with Sprintup Services!", 20, 140);
+      doc.save("booking_receipt.pdf");
+    });
+  </script>
+  <script>
+  const fareMap = {
+    "Nairobi_Kisumu": 1200,
+    "Kericho_Kisumu": 800,
+    "Nairobi_Eldoret": 1100,
+    "Nakuru_Nairobi": 700,
+    "Eldoret_Kericho": 600,
+    // Add more routes as needed
+  };
+
+  document.getElementById('from').addEventListener('change', calculateFare);
+  document.getElementById('to').addEventListener('change', calculateFare);
+  document.getElementById('booking-type').addEventListener('change', calculateFare);
+
+  function calculateFare() {
+    const from = document.getElementById('from').value;
+    const to = document.getElementById('to').value;
+    const type = document.getElementById('booking-type').value;
+
+    if (from && to && from !== to) {
+      const key = `${from}_${to}`;
+      const reverseKey = `${to}_${from}`;
+      const baseFare = fareMap[key] || fareMap[reverseKey];
+
+      if (baseFare) {
+        const fare = type === 'parcel' ? baseFare * 0.6 : baseFare;
+        document.getElementById('fare').value = `Ksh ${fare.toFixed(0)}`;
+      } else {
+        document.getElementById('fare').value = "Fare not found";
+      }
+    } else {
+      document.getElementById('fare').value = "";
+    }
+  }
+</script>
+
+</body>
+</html>
